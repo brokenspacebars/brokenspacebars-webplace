@@ -1,0 +1,24 @@
+{
+  "name": "brokenspacebars-page",
+  "version": "0.0.1",
+  "authors": [
+    "Vagios Vlachos <bagios234@gmail.com>"
+  ],
+  "description": "The BROKENSPACEBARS Productions place on the interweb",
+  "main": "index.html.erb",
+  "keywords": [
+    "brokenspacebars",
+    "productions",
+    "awesomeness"
+  ],
+  "license": "MIT",
+  "homepage": "http://brokenspacebars.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "source\bower_components",
+    "test",
+    "tests"
+  ]
+}
