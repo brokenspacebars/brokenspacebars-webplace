@@ -3,9 +3,12 @@
 ###
 
 # Change Compass configuration
-# compass_config do |config|
-#   config.output_style = :compact
-# end
+compass_config do |config|
+  # Additional compass plugins required here
+  config.add_import_path "bower_components/foundation/scss"
+
+  config.output_style = :compact
+end
 
 ###
 # Page options, layouts, aliases and proxies
@@ -36,9 +39,15 @@
 # activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
-# configure :development do
-#   activate :livereload
-# end
+configure :development do
+  activate :livereload
+end
+
+# Add bower's directory to sprockets asset path
+after_configuration do
+  @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
+  sprockets.append_path File.join "#{root}", @bower_config["directory"]
+end
 
 # Methods defined in the helpers block are available in templates
 # helpers do
