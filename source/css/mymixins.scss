@@ -46,6 +46,13 @@ $bs-words-percent-padding: percentage(242/849);
   -ms-animation-duration: $duration;
   animation-duration: $duration;
 }
+@mixin animation-delay($delay) {
+  -webkit-animation-delay: $delay;
+  -moz-animation-delay: $delay;
+  -o-animation-delay: $delay;
+  -ms-animation-delay: $delay;
+  animation-delay: $delay;
+}
 @mixin animation-timing-function($timing-function) {
   -webkit-animation-timing-function: $timing-function;
   -moz-animation-timing-function: $timing-function;
@@ -53,3 +60,33 @@ $bs-words-percent-padding: percentage(242/849);
   -ms-animation-timing-function: $timing-function;
   animation-timing-function: $timing-function;
 }
+
+// Keyframes compatibility
+@mixin keyframes($name) {
+  @-webkit-keyframes $name { @content };
+  @-moz-keyframes $name { @content };
+  @-o-keyframes $name { @content };
+  @-keyframes $name { @content };
+}
+
+// // Animation fade-in and scale
+// @mixin basic-animation($name) {
+//   @include keyframes($name) {
+//     from {
+//       @include transform(scale(0));
+//       opacity: 0;
+//     }
+//     50% {
+//       @include transform(scale(0));
+//       opacity: 0;
+//     }
+//     82.5% {
+//       @include transform(scale(1.03));
+//       @include animation-timing-function(ease-out);
+//       opacity: 1;
+//     }
+//     to {
+//       @include transform(scale(1));
+//     }
+//   }
+// }

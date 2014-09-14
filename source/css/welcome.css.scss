@@ -5,29 +5,7 @@ body {
   background-image: url('../img/background.png');
 }
 
-// Create logo and animation
-.logo {
-  // background-image: linear-gradient($orange, $bg-color-1);
-}
-
-.logo1 {
-  @include logo-div('../img/logo.png', $bs-logo-percent-padding);
-  margin-top: 25px;
-}
-
-.logo2 {
-  @include logo-div('../img/words.png', $bs-words-percent-padding);
-}
-
-.logorow {
-  max-width: 600px;
-}
-
-.animation {
-  @include animation-name(animation);
-  @include animation-duration(2s);
-}
-
+// Basic animation
 @-webkit-keyframes animation {
   from {
     @include transform(scale(0));
@@ -47,7 +25,32 @@ body {
   }
 }
 
-// Glyphicons and animation
+// Create logo
+.logo {
+  // background-image: linear-gradient($orange, $bg-color-1);
+}
+
+.logo1 {
+  @include logo-div('../img/logo.png', $bs-logo-percent-padding);
+  margin-top: 25px;
+}
+
+.logo2 {
+  @include logo-div('../img/words.png', $bs-words-percent-padding);
+}
+
+.logorow {
+  max-width: 600px;
+}
+
+// Animate logo
+.animation {
+  @include animation-name(animation);
+  @include animation-duration(1s);
+}
+
+
+// Animated Icons
 .row {
   margin-top: 20px;
 }
@@ -59,7 +62,15 @@ i {
 }
 .first {
   float: right;
+  @include animation-name(animation);
+  @include animation-duration(2s);
+}
+.second {
+  @include animation-name(animation);
+  @include animation-duration(2.5s);
 }
 .third {
   float: left;
+  @include animation-name(animation);
+  @include animation-duration(3s);
 }
