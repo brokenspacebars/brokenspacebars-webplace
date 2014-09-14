@@ -1,8 +1,8 @@
 body {
   background-color: $bg-color-1;
-  background-image: linear-gradient($orange, $bg-color-1);
+  // background-image: linear-gradient($orange, $bg-color-1);
 
-  // background-image: url('../img/background.png');
+  background-image: url('../img/background.png');
 }
 
 // Create logo and animation
@@ -53,6 +53,9 @@ body {
 }
 .small-4 {
   text-align: center;
+}
+i {
+  font-size: 3em;
 }
 .first {
   float: right;
