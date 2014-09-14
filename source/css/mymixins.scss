@@ -1,0 +1,17 @@
+// Colors
+$bg-color-1: #222222;
+
+// Calculate percentages
+$bs-logo-percent-padding: percentage(351/770);
+$bs-words-percent-padding: percentage(219/770);
+
+// Create logo divs
+@mixin logo-div($img, $pad) {
+  background-image: url($img);
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: $pad;
+  height: 0;
+  width: 100%;
+}
