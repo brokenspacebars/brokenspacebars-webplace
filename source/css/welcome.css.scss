@@ -4,7 +4,7 @@ body {
 
 .logo1 {
   @include logo-div('../img/logo.png', $bs-logo-percent-padding);
-  margin-top: 25px;
+  margin-top: 25px;  
 }
 
 .logo2 {
@@ -13,4 +13,28 @@ body {
 
 .logorow {
   max-width: 600px;
+}
+
+.animation {
+  @include animation-name(animation);
+  @include animation-duration(2s);
+}
+
+@-webkit-keyframes animation {
+  from {
+    @include transform(scale(0));
+    opacity: 0;
+  }
+  50% {
+    @include transform(scale(0));
+    opacity: 0;
+  }
+  82.5% {
+    @include transform(scale(1.03));
+    @include animation-timing-function(ease-out);
+    opacity: 1;
+  }
+  to {
+    @include transform(scale(1));
+  }
 }

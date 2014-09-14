@@ -18,3 +18,35 @@ $bs-words-percent-padding: percentage(242/849);
   margin-left: 10px;
   margin-right: 10px;
 }
+
+// Transform compatibility
+@mixin transform($transforms) {
+  -webkit-transform: $transforms;
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  transform: $transforms;
+}
+
+// Animation compatibility
+@mixin animation-name($name) {
+  -webkit-animation-name: $name;
+  -moz-animation-name: $name;
+  -o-animation-name: $name;
+  -ms-animation-name: $name;
+  animation-name: $name;
+}
+@mixin animation-duration($duration) {
+  -webkit-animation-duration: $duration;
+  -moz-animation-duration: $duration;
+  -o-animation-duration: $duration;
+  -ms-animation-duration: $duration;
+  animation-duration: $duration;
+}
+@mixin animation-timing-function($timing-function) {
+  -webkit-animation-timing-function: $timing-function;
+  -moz-animation-timing-function: $timing-function;
+  -o-animation-timing-function: $timing-function;
+  -ms-animation-timing-function: $timing-function;
+  animation-timing-function: $timing-function;
+}
