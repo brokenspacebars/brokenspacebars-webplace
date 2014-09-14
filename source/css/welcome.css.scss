@@ -1,10 +1,18 @@
 body {
   background-color: $bg-color-1;
+  background-image: linear-gradient($orange, $bg-color-1);
+
+  // background-image: url('../img/background.png');
+}
+
+// Create logo and animation
+.logo {
+  // background-image: linear-gradient($orange, $bg-color-1);
 }
 
 .logo1 {
   @include logo-div('../img/logo.png', $bs-logo-percent-padding);
-  margin-top: 25px;  
+  margin-top: 25px;
 }
 
 .logo2 {
@@ -37,4 +45,18 @@ body {
   to {
     @include transform(scale(1));
   }
+}
+
+// Glyphicons and animation
+.row {
+  margin-top: 20px;
+}
+.small-4 {
+  text-align: center;
+}
+.first {
+  float: right;
+}
+.third {
+  float: left;
 }
