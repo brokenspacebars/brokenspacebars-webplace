@@ -3,10 +3,14 @@ body {
 }
 
 .logo1 {
-  @include logo-div('../img/brokenspacebars-logo.png', $bs-logo-percent-padding);
+  @include logo-div('../img/logo.png', $bs-logo-percent-padding);
+  margin-top: 25px;
 }
 
 .logo2 {
-  @include logo-div('../img/brokenspacebars-words.png', $bs-words-percent-padding);
-  margin-top: -8%;
+  @include logo-div('../img/words.png', $bs-words-percent-padding);
+}
+
+.logorow {
+  max-width: 600px;
 }
